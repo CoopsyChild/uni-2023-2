@@ -1,0 +1,68 @@
+*******************************
+
+Amikor előadást tartasz mindig kell egy cél (Operational Goal). Az előadás célja az ismeret átadás.
+
+Adat -> Információ -> Ismeret -> Tudás
+
+A jel az ami terjed de nem érted. Jelből akkor lesz adat ha felfogom. Pl. az adat, hogy 5. Az adat nem válaszol a kérdésre, de az adatból úgy lesz információ, hogy bizonytalanságot szüntet meg. Az ismeretre a legjobb péda a Kresz, az ismerete sok kicsit összefüggő információkbol áll. 
+(Pl. Ha zöld a lámpa, akkor átmehetek a zebrán) -> Ha zöld a lámpa ÉS nincs rendőri irányítás ÉS nem száguldozik egy autó, akkor átmehetek a zebrán.
+Következő szint amikor alkalmazunk egy ismeretet ezt nevezzük tudásnak. Mester szint az amikor tudsz valamit, értesz hozzá, sőt tehetséges vagy benne és legalább 10 éve gyakorlod. Itt már intuícióval rendelkezel, tehát ráérzel a megfelelő megoldásra.
+
+*******************************
+
+Descartes szorzat 
+{1,2}*{a,b,c} = {(1,a),(1,b),(1,c),(2,a),(2,b),(2,c)} - rendezett kettes (halmaz) (set) | nincs sorrend
+{1,2,3}*{a,b}*{hello,szia} = {(1,a,hello),(1,a,szia),(1,b,hello),(1,b,szia),(2,a,hello),(2,a,szia),(2,b,hello),(2,b,szia),(3,a,hello),(3,a,szia),(3,b,hello),(3,b,szia)} - rendezett hármas (tuple)
+
+Szerzetesek és kannibálok játék:
+A: - Kannibálok száma a baloldalon
+   - Kannibálok száma a jobboldalon
+   stb.
+k = (3,3,"Bal",0,0)
+C = {(0,0,"Jobb",3,3)}
+
+
+Állapottér Reprezentáció
+- Egy rendezett négyes = (A,k,C,O)
+	- A : Az állapotok halmaza, a A részhalmaza az érdekes részletek által kifeszített térre.
+	- k : a kezdő állapot
+	- C : cél állapotok halmaza, ez egy halmaz. Azokat a kis c-ket gyűjtöm össze ahol c eleme A-nak, és Célállapot c
+	- O : operátorok halmaza, megváltoztatja az állapot teret. (átviszek a balpartról a csónakkal egy szerzetest és egy kannibált)
+
+Halmaz konstrukció
+Az állapotok halamazát kétféle képpen adhatom meg, felsorolással vagy karakterisztikus fgv-el.
+k eleme kell hogy legyen a nagy A-nak.
+C részhalmaza A-nak
+
+2,3,5,7
+
+Karakterisztikus fgv. (x E N ÉS x >= 3 és x < 5)
+
+
+Def(Akalmazható Operátor): Azt mondjuk, hogy a kis 'o' operátor alkalmazható a kis 'a' állapotra akkor és csak akkor ha, preo(a) és posto(b) is igaz, ahol preo() az 'o' operator előfeltétele, és a posto az 'o' operátor utófeltétele, és b = o(a)
+
+Intuitívan: Egy operátor akkor alkalmazható, ha igaz az elő és utó feltétele is, az előfeltétele a bementen dolgozik, az utófeltétel a kimenten dolgozik. Tehát minden operátornak van elő és utó feltétele is.
+
+Operátor, hogy arról az oldalról ahol a csónak van átviszek két szerzetest a másik partra.
+Előfeltétel: Ha van legalább 2 szerzetes a bal oldalon.
+Utófeltétel: Ha átviszem a két szerzetest olyan állapot legyen ami jó (legyen jó a konfiguráció). Azt fogalmazza meg, hogy az operátor nem vezethet ki az állapot térből.
+
+Keresési tér: D1xD2xDn
+Pl. (3,3,"Bal",0,0) egy pont a keresési térben, de nem minden pont állapot. A keresési tér egy pontja konfiguráció.
+
+Egy konfiguráció akkor állapot ha teljesül rá az állapot-e (úgymond IsÁllapot fgv., tehát ez az utófeltétel)
+
+
+Inkrementálás:
+inc(x) = x + 1;
+inc: |N -> |N successor
+Ha o eleme O, akkor A -> A
+Átvisz(0, 2, (3,3,"bal",0,0)) = (3,1,"jobb",0,2)
+Egy állapotból csináltam egy új állapotot.
+
+  o
+a -> b
+
+Állapottér Gráf: Egy irányított gráf amelyben a csúcsok megfelelnek az állapotoknak és élek megfelelnek az alkalmazható operátoroknak
+
+Mai órán az állapottér reprezentációjáról beszélgettünk a 3 szerzetes 3 kannibál problémáján keresztül, megnéztük milyen állapotok vannak, mi a kezdő állapot, mi a cél állapot, mik az operátorok. Vettük az alkalmazahtó operátorok definiciója. Állapottér Reprezentáció az első tétel amit végig vettünk.

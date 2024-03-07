@@ -1,0 +1,14 @@
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\bin\Debug\net8.0\02_EgyszemelyesJatekok.exe
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\bin\Debug\net8.0\02_EgyszemelyesJatekok.deps.json
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\bin\Debug\net8.0\02_EgyszemelyesJatekok.runtimeconfig.json
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\bin\Debug\net8.0\02_EgyszemelyesJatekok.dll
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\bin\Debug\net8.0\02_EgyszemelyesJatekok.pdb
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.AssemblyInfoInputs.cache
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.AssemblyInfo.cs
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.csproj.CoreCompileInputs.cache
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.dll
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\refint\02_EgyszemelyesJatekok.dll
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.pdb
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\02_EgyszemelyesJatekok.genruntimeconfig.cache
+C:\Users\ffark\OneDrive\Desktop\Repos\02_EgyszemelyesJatekok\obj\Debug\net8.0\ref\02_EgyszemelyesJatekok.dll

@@ -1,0 +1,62 @@
+PPP - Design Patterns (tervezési minták) Best Practices (jól bevált módszerek) Principles (alapelvek)
+
+GOF - Gang of Four ("négyek bandája") - GOF Book: Tervezési Minták (1995)
+Template Method != sablon fgv.-el, inkább sablon metódus kéne, hogy legyen. Rft folytatása a tantárgy.
+
+Tervezési Minták, olyan gyakran előforduló programozói feladatokra adott megoldás ami rugalmas.
+
+1. Singleton: Egy olyan tervezési minta ami azt mondja, meg, hogyan kell olyan osztályt tervezni amiből maximum egy példány lehet.
+- Kell saját konstruktort írni, mert van automatikus konstruktor, ami publikus, amivel akárhány példányt lére lehet hozni.
+- Saját konstruktornak privátnak kell lennie, hogy kívülről ne lehessen meghívni.
+- Kell egy globális hozzáférési pont amit GetInstance-nak hívunk.
+- A GetInstance mindenkinek ugyanazt a példányt adja.
+
+SOLID alapelvek: Objektum Orientált Tervezés Alapelvei (Object Oriented Design Principles)
+- Legfontosabb SOLID alapelv OCP.
+- Uncle Bob (Robert C. Martin) szerint a legfontosabb SOLID alapelv az SRP.
+
+Single Responsibility Priciple (SRP)
+- Minden osztálynak csak egy felelősségi köre legyen, de azt lássa el teljes mértékben. Ne csinálj Macskuty osztályt. Űgy tünhet, hogy a macskát és a kutyát jó ötlet lehet összevonni. Egy idő után elő jönnek a különbségek és tele lesz if-ekkel az osztályom. Ha változásnak nem egy oka van akkor megsértetted az SRP-t.
+- Az SRP-t kétféle képpen lehet megsérteni: Túl sok felelősségi kört látsz el, vagy nem teljesen feded le az egy felelősségi köröd. (Ha kódod tele van If-el akkor megsértetted az SRP-t). Fatty osztály az ami elhízott ezt szét kell szedni. Refaktorálunk és szétszedjük kisebb osztályokra.
+MacsKuty pédánál kell egy absztrakt közös ős, ebben kiemeljük a közös dolgokat (etetni itatni kell stb.) A Macska osztályban egységbe zárjuk a macska viselkedését. A Kutya osztályban egységbe zárjuk a kutya viselkedését. (Interface-ben a szerződést zárjuk egy egysébe - RTT erről fog szólni). SRP mellé kell rengeteg Unit Teszt. A Unit Test az a metódusok tesztje. 
+
+Egy Unit teszt áll:
+-??
+-Fix paraméterek
+-Elvárt eredmény
+
+Egy metódushoz általában 5-6 Unit Test-et írok, ez az életbiztosítás.
+
+Fő fő alapelv: A program kódja állandóan változik! Valami miatt mindig hozzá nyúlni a forráskódhoz.
+- Pl. ha hibát találok és kijavítom.
+- Megrendelői igény változik, vagy félre értettem a megrendelőt.
+- A környezet változik.
+  1. Egy másik osztály megváltozik, emiatt változtatni kell -> Implementációs függőség.
+  2. Megváltozik egy jogszabály vagy egy rendelet. Emiatt egy csomó programot át kell írni. -> Szabályozói környezet.
+  3. Megváltozik az Oprendszer.
+- Refaktorálás, magyarul kódszépítés, szépítem a kódot de a funkcionalitása ugyanaz marad. Védekezünk a spagetti kód (html-en belül írom a php-t, összekeveridik a front-end és bakc-end) (ma már inkább az a spagetti kód ha sok az Implementációs függőség) ellen.
+
+Mivel a forráskód állandóan változik ezért kellenek az Unit Tesztek, minden változtatás során lefuttatom az unit testet. A biztonsági öv (unit tesztek) miatt merjük változtatni a kódot. Azt a kódot amihez nem mersz hozzányúlni azt rothadó (vagy törékeny) kódnak hívják. A törékeny a rugalmas kód ellentetje. A rugalmas kód az reusable, tehát újrahasznosítható, ez azt jelenti, hogy ha meg kell változtatnom a kódot akkor azt könnyű újrahasznosítani, bővíteni, könnyű hozzányúlni.
+
+Kiíratni csak a főprogram írjon ki, a többi az csak számol. Tehát a faktoriálist számoló metódusom ne írja ki az eredményt. Ha kiíratsz hozzákötöd egy platformhoz.
+
+2. SOLID Alapelv: OCP (Open for extension but closed for modification): Minden osztály illetve modul legyen nyitott a bővítésre, de zárt a módosításokra.
+- Csak a bővítést engedi (Insert a DB-nél), Ha már van egy kitesztelt, kiforrot metódusod azt ne változtasd mert a program többi része azon alapszik. Ha már van egy kitesztelt, kiforrot osztályod azt ne változtasd mert a program többi része azon alapszik. Ha már van egy kitesztelt, kiforrot modulod azt ne változtasd mert a program többi része azon alapszik.
+
+SRP vs OCP
+- SRP-t nehéz megfogalmazni a szintaxis szintjén, az OCP-t lehet.
+
+OCP szintaxis szint:
+- Ne használj if-else if- else szerkezetet, illetve ne használj ovveride kulcsszót csak absztrakt illetve hook metódust.
+"Készítek egy Hook-ot amire ráülsz vagy sem" Ha ráülsz meghívódik a te funkcionalitásod is.
+
+Mindkét alapelv ugyanazt eredményezi: Kevés osztály, sok absztrakció, kevés if-elés. -> Viszont emiatt sok hívást kell használni.
+
+Tervezőnek törekednie kell arra, hogy a megoldás mindig lehető legabsztraktabb legyen. A programozó ezzel szemben arra törekszik, hogy minél konkrétabb megoldás legyen, minél konkrétabb kódot írjon. A jó terv a programozó és a tervező egészséges vitályából alakul ki, emiatt a tervező nem lehet főnöke a programozóknak és emiatt a vezető fejlesztő sem lehet főnöke a tervezőnek.
+
+Kötelező olvasmányok:
+- Clean Code
+- The Clean Coder
+- Head First Design Patterns
+- Scrum and Kanban Best of both
+- Scrum and XP from the trenches

@@ -1,0 +1,31 @@
+Gang of Four, GOF
+
+GOF 1: Programozz felületre (interface), megvalósítás (implementáció, az egész forráskód ) helyett.
+
+Gof 2: Használj objektum összetételt öröklődés helyett, ha csak lehet.
+
+Miért nem jó megvalósításra programozni. Ha tudom, hogy hogyan van implementálva egy osztály akkor én ezt a tudást kihasználhatom. Ha kihasználom ezt a tudást akkor implementációs függősében leszek. Ha megváltoztatom az osztályomat más dolgokat is meg kell változtatni.
+
+Ha felületre programozok azt jelenti, hogy csak a publikus részletek ismerhetem, és hiába tudom, hogy van implementálva az osztály azt nem használhatom fel.
+
+Logikai törlés és fizikai törlés ez alapvetően az implementációt érinti. Logikailag egy flag-el jelzem, hogy törölve van egy rekord.
+Fizikai törlésnél kitörlöm a táblázatból. Ez belső implementációs kérdés.
+
+Lambda kifejezés: Olyan konstruktor (quantor) ami név nélküli függvényt hoz létre. 
+Szintaxisa: Lambda parameter.kiszamitasiszabaly, pl.: lambda x.x+1 -> Ez egy egyparaméteres fgv. ami kap egy számot és megnöveli eggyel az értékét.
+
+c# x => x + 1
+java x -> x + 1
+
+c# x => {Cw(x);}
+java x -> {Cw(x);}
+
+c# (x,y) => x + y
+java (x,y) -> x + y
+
+Ami C#-ban LINQ az Javaban Stream kezelés
+
+map egy magasabb rendű fgv, minden egyes elemere meghívja a névnélküli fgv-t és listát ad vissza, csak az eredeti listában lecseréli az új elemekre. Az eredetiben rekordok voltak, az újban a mi feladatunkban stringek lesznek. Kétfajta terminátorunk van toList() és toArray()
+map, filter, red
+
+HF: Atlag fizetes és legnagyobb fizu, kikeresi a legtöbbet, kis feltöltő progi.
