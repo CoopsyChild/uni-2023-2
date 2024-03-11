@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.OptionalDouble;
 
 public class Alkalmazottak {
 
@@ -35,6 +36,28 @@ public class Alkalmazottak {
         alkalmazottak.get(index).torolve = true;
     }
 
+    public double atlagFizetes() throws Exception{
+        return nemToroltAlkOsszfizetese() / jelenlegiAlkalmazottakSzama();
+    }
+
+    public double atlagFizetesV2() throws Exception{
+        return alkalmazottak.stream().filter(x -> x.torolve == false).mapToDouble(x -> x.fizu).sum() / alkalmazottak.stream().filter(x -> x.torolve == false).count();
+    }
+
+    public int legnagyobbFizu() throws Exception{
+        return (int) alkalmazottak.stream().filter(x -> x.torolve == false).mapToDouble(x -> x.fizu).max().getAsDouble();
+    }
+
+    public String kiKeresiALegtobbet() throws Exception {
+        int maxFizu = legnagyobbFizu();
+        return alkalmazottak.stream().filter(x -> x.torolve == false && x.fizu == maxFizu).findFirst().get().nev;
+    }
+
+    public String kiKeresiALegtobbetV2() throws Exception {
+        int maxFizu = (int) alkalmazottak.stream().filter(x -> x.torolve == false).mapToDouble(x -> x.fizu).max().getAsDouble();
+        return alkalmazottak.stream().filter(x -> x.torolve == false && x.fizu == maxFizu).findFirst().get().nev;
+    }
+
     public int osszesEddigiAlkalmazott() {
         return alkalmazottak.size();
     }
@@ -44,7 +67,6 @@ public class Alkalmazottak {
     }
 
     public double nemToroltAlkOsszfizetese() {
-        long fizuk = 0;
         return alkalmazottak.stream().filter(x -> x.torolve == false).mapToDouble(x -> x.fizu).sum();
     }
 }
