@@ -1,0 +1,5 @@
+GOF1
+Programozz felületre implementáció helyett. Program to an interface not an implementation. Szintaxis szintjén azt jelenti, hogy a statikus típus az a lehető legősibb, aminek az interface még jó. 
+
+Kutyás példa:
+Kutya k1 = new vadászkutya

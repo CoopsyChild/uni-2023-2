@@ -1,0 +1,14 @@
+Alapok a robotika alapjaihoz:
+- Elektromos áram, feszkó, áramerősség
+	a, Pozitív és Negatív elektromos töltéssel rendelkező részecskék, proton, elektron
+	b, az elektron tömegének 1840~ szorosa a proton tömege?
+	c, Ionok úgy keletkeznek a semleges... hogy leadnak elektronokat?, pl: oxidion
+	d, fémek szívesen adnak le elektronokat, pozitív töltésü fém ionok lesznek
+	e, elektroniktos vezetés (kocsi akksi pl.)
+	f, fémes vezetés (a protonok nem mozdulnak sehova mert kötötten vannak az atomnagban, vegyérték elektronok képesek csak leszakadni) csak elektronok áramlása
+- Egyenáram, váltakozó áram
+	a, Egyenáram egyirányu elektron áramlás van ugye, katód (-) felől az anód (+) felé. (de ez igazából mindegy úgymond, csak egy megállapodás) az árm iránya ellentétes az elektronok mozgásával.
+	b, Váltakozó áram, periódkisuan ismétlődik és szabályosan változik milyen az áram iránya
+- Effektív (átlag-)feszültség, pillanyatni feszültség.
+- Periodikus változás, periódusidő, frekvencia
+ Effektív

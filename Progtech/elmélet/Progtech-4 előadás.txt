@@ -1,0 +1,27 @@
+Unit testek 
+
+IDE (Integrated Dev Enviroment)
+
+Programozo Dojo és programozó Katák
+
+craftmanship (jó munkásember) - Elfogadjuk azt a tényt, hogy önképezni kell magunkat. Az informatika az egy gyorsvonat nagyon könnyű lemaradni. Nem várhatjuk el, hogy a cégünk ahol dolgozunk, hogy ezt lefedje. Az önképzés egyik formája a dojo, tutorialokat nézegetel, dojoban úgynevezett katákat gyakorlunk.
+
+Monogram Factory (egyszerű Kata, egy névből egy monogramot csinálunk egy metódussal). Ahhoz TDD használunk hogy kihúzzuk a bonyolúltságot. Leírunk 1 tesztesetet, majd leírunk egy metódust.
+Regressziós teszt -> ha az összes unit testet lefuttatom.
+
+Keressünk ilyen katákat és oldjuk meg.
+
+BDD (Behaviour Driven Development) Viselkedés Alapú Fejlesztés, Use Case alapú tervezés. RUP (Rational Unified Proccess) módszertannal jött be. Melyik felhasználó melyik funkciót használhatja. Arra a szolgál, hogy ránézzen a megrendelő és akkor látja, hogy ki mit használhat. A hülye megrendelő mindig változtatja amit akar, és sosem olvas el semmit, ezért kell ábrákat adni a megrendelő orra alá. Use Case-ekből úgynevezett User Storykat gyártunk. Egy Use Case-hez sok story szokott tartozni. User Story a szöveg, User Story a kép.
+
+
+Model Driven Architechture - Elég megtervezni szoftvert UML-ben (ez egy vizuális nyelv), megnyomom a gombot és elkészül a kód. Aztán Bobácsi azt mondta, hogy nem, hanem a szoftver tervrajza a forráskód, csak a forráskód elég részletes ahhoz, hogy programot készítsünk belőle. Az UML terv sosem elég részletes ahhoz, hogy abból szoftver legyen.
+
+Domain Specific Languages - Domain Specifikus Nyelvek
+Egy szűk domain-en belül működhet a MDA. (pl. két autókereskedés elég hasonlóan működik). Nagyon konkrét User Storykat csinálunk, amiből nagyon könnyű lesz elfogadási tesztet generálni. A User Storyt nem a tervező, programozó írja. Az User Storykat a három amígó (tesztelő, business analyst, Product Owner) írja, Gherkin nyelven, félig formális nyelv (semi-formal) -> Given(az adott szituáció) When(milyen esemény történik az adott szituban) Then(erre milyen válasz reakciót adunk). Szuper konkrétnak kell lenni. 
+Given: Józsibácsi sikeresen bejött 
+End: Józsi bácsi elinditotta a raktár? 
+When: Megérkezett a Zöld bútorgyár szállítmány és kiderült, hogy egyel kevesebb árucikk érkezett. (kevés mert nincs benne, hogy melyik árucikk hiányzik) 
+Then: Józsibácsi kitölti a különbözeti nyomtatvány, kinyomttatja AND aláíratja a szállítóval.
+
+UAT - User Acceptance Test. DO? - Definition of (Mikor vagyok kész a User Storyval)
+MDA élőholtként előjött. Megtervezem a szoftvert -> majd odaadom az A.I.-nak és akkor ő majd megcsinálja a munka nagyrészét, majd ezt kicsiszolom. Úgy tűnik ez életképes gondolat. Erre válasz a craftmanship.

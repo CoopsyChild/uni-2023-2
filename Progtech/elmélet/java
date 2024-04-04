@@ -1,0 +1,22 @@
+@Override 
+public String getNev() {
+    return "Gömbdíszes " + alapKF.getNev();
+}
+
+//Csillagdísz
+
+Public Csillagdisz(KF alapKF) {
+    this.alapKF = alapKF;
+}
+
+@Override 
+public double getAr() {
+    return alapKF.getAr() + 3000.0;
+}
+
+@Override 
+public String getNev() {
+    return "Gömbdíszes " + alapKF.getNev();
+}
+
+KF kf3 = new GombDisz();
